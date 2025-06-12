@@ -1,7 +1,3 @@
-<div align="center">
-  <a href="#"><img src="./imgs/method.png" width="300px"></a>
-</div>
-
 # CoRT: Code-integrated Reasoning within Thinking
 
 <div align="center">  
@@ -172,4 +168,3 @@ For questions or suggestions, feel free to reach out to us at [chengpengli@mail.
 [![Star History Chart](https://api.star-history.com/svg?repos=qinsheng/CORT&type=Date)](https://star-history.com/#qinsheng/CORT&Date)
 ```
 
----
