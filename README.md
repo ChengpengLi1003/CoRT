@@ -101,5 +101,4 @@ sh deepscaler/rl_scripts/launch_cort_rl.sh
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2506.09820}, 
 }
-sh evaluation/eval_dp_8_tp_1_n_16_maxml_32k_maxfc_15_maxlpc_32k.sh <model_to_eval>
 ```
