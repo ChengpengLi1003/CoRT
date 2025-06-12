@@ -1,39 +1,78 @@
+当然可以！以下是**完整优化后的 `README.md` 内容**，你可以直接复制粘贴使用：
+
+---
+
+```markdown
+<div align="center">
+  <a href="#"><img src="./imgs/method.png" width="300px"></a>
+</div>
+
 # CoRT: Code-integrated Reasoning within Thinking
-CoRT is a post-training framework that teaches Large Reasoning Models (LRMs) to effectively leverage Code Interpreters (CI) for enhanced mathematical reasoning. Our approach addresses the key challenge of integrating external computational tools with LRMs' internal reasoning processes through strategic hint engineering and efficient training methodologies.
 
-<p align="center" width="100%">
-<a ><img src="./imgs/method.png" alt="CoRT Framework" style="width: 80%; min-width: 300px; display: block; margin: auto;"></a>
-</p> 
+<div align="center">  
+  <a href="https://arxiv.org/abs/2506.09820"><img src="https://img.shields.io/badge/arXiv-2506.09820-b31b1b.svg?logo=arxiv" alt="Paper"></a>
+  <a href="https://modelscope.cn/models?q=CoRT"><img src="https://img.shields.io/badge/ModelScope-CoRT-blue?logo=modelscope" alt="ModelScope Models"></a>
+  <a href="https://github.com/qinsheng/CORT"><img src="https://img.shields.io/github/stars/qinsheng/CORT?style=social" alt="GitHub stars"></a>
+</div>
 
-## Key Features
-- **Hint-Engineering**: Strategic insertion of hints at appropriate positions to optimize LRM-CI interaction
-- **High Sample Efficiency**: Achieves significant improvements with only 30 manually annotated high-quality samples
-- **Token Efficiency**: Reduces token usage by 30-50% while maintaining competitive performance
-- **Complete Training Pipeline**: Supports SFT, RFT, and RL training stages
+<div align="center">
+  🤖 A post-training framework for enhancing mathematical reasoning in Large Language Models using strategic code interpreter integration.
+</div>
 
-## Installation
+---
+
+## 📌 Overview
+
+CoRT is a **post-training framework** that teaches **Large Reasoning Models (LRMs)** to effectively leverage **Code Interpreters (CI)** for enhanced mathematical reasoning. Our approach addresses the key challenge of integrating external computational tools with LRMs' internal reasoning processes through **strategic hint engineering** and **efficient training methodologies**.
+
+<p align="center">
+  <img src="./imgs/method.png" alt="CoRT Framework" style="width: 80%; min-width: 300px; display: block; margin: auto;">
+</p>
+
+---
+
+## ✨ Key Features
+
+- **🔍 Hint-Engineering**: Strategic insertion of hints at appropriate positions to optimize LRM-CI interaction
+- **🚀 High Sample Efficiency**: Achieves significant improvements with only 30 manually annotated high-quality samples
+- **🧾 Token Efficiency**: Reduces token usage by 30–50% while maintaining competitive performance
+- **📦 Complete Training Pipeline**: Supports SFT, RFT, and RL training stages
+
+---
+
+## ⚙️ Installation
+
 ```bash
 # Recommend Python 3.10
 # We recommend following https://github.com/agentica-project/rllm/tree/deepscaler for installation
-# Note: We depend on vllm version 0.6.3.post1
+# Note: We depend on vLLM version 0.6.3.post1
+
 cd deepscaler
 pip install -e ./verl
 pip install -e .
 ```
-Our implementation is built upon the deepscaler LongCOT RL framework with modifications for LongTIR RL.
 
-## Models
+> **Note:** Our implementation is built upon the [deepscaler LongCOT RL framework](https://github.com/agentica-project/rllm) with modifications for LongTIR RL.
+
+---
+
+## 🧠 Open-Sourced Models
+
 We open-source two 1.5B RL models trained with our CoRT framework:
 
-### Prompt-Hint-1.5B-RL
+### 📥 Prompt-Hint-1.5B-RL
+
 - **Model**: [CoRT-Prompt-Hint-1.5B-RL](https://modelscope.cn/models/qinsheng/CoRT-Prompt-Hint-1.5B-RL)
 - **Performance**: 58.3% average accuracy across benchmarks
 
-### Hint-Engineering-1.5B-RL  
+### 🛠️ Hint-Engineering-1.5B-RL
+
 - **Model**: [CoRT-Hint-Engineering-1.5B-RL](https://modelscope.cn/models/qinsheng/CoRT-Hint-Engineering-1.5B-RL)
 - **Performance**: 56.4% average accuracy with superior token efficiency
 
-## Inference
+---
+
+## 🧪 Inference
 
 To run inference with our models, use the following command:
 
@@ -57,7 +96,7 @@ TOKENIZERS_PARALLELISM=false VLLM_USE_V1=1 python -m infer.inference_vllm_dp_mj 
     --tensor_parallel_size 1
 ```
 
-### Input Format
+### 📄 Input Format
 
 The input file should be in JSONL format, where each line contains a JSON object with a `prompt` field. Each prompt should be a mathematical problem followed by the instruction:
 
@@ -67,7 +106,7 @@ The input file should be in JSONL format, where each line contains a JSON object
 }
 ```
 
-### Key Parameters
+### 🔧 Key Parameters
 
 - `--input_file`: Path to your JSONL input file
 - `--model_name_or_path`: Path to the downloaded model (either Prompt-Hint-1.5B-RL or Hint-Engineering-1.5B-RL)
@@ -76,23 +115,33 @@ The input file should be in JSONL format, where each line contains a JSON object
 - `--max_func_call`: Maximum number of function calls allowed (default: 15)
 - `--max_model_len`: Maximum sequence length (default: 32768)
 
-## Evaluation
+---
+
+## 📊 Evaluation
+
 Evaluate and reproduce the performance of our two RL 1.5B models:
+
 ```bash
 cd CORT
 sh evaluation/eval_dp_8_tp_1_n_16_maxml_32k_maxfc_15_maxlpc_32k.sh <model_to_eval>
 ```
 
-## RL Training Your own LongTIR Models
+---
+
+## 🧰 RL Training Your own LongTIR Models
+
 ```bash
 # Please refer to `data/toy_train.reason_step.parquet` for train samples construction
 cd CORT
 sh deepscaler/rl_scripts/launch_cort_rl.sh
 ```
 
-## Citation
-Our implementation builds upon the open-source codebases of [RLLM](https://github.com/agentica-project/rllm) and [VeRL](https://github.com/volcengine/verl).
+---
+
+## 📎 Citation
+
 If you find our work useful for your research, please cite our paper:
+
 ```bibtex
 @misc{li2025cortcodeintegratedreasoningthinking,
       title={CoRT: Code-integrated Reasoning within Thinking}, 
@@ -104,3 +153,28 @@ If you find our work useful for your research, please cite our paper:
       url={https://arxiv.org/abs/2506.09820}, 
 }
 ```
+
+Our implementation builds upon the open-source codebases of:
+- [RLLM](https://github.com/agentica-project/rllm)
+- [VeRL](https://github.com/volcengine/verl)
+
+---
+
+## 📝 License
+
+This project is released under the MIT License.
+
+---
+
+## 📬 Contact
+
+For questions or suggestions, feel free to reach out to us at [chengpengli@mail.ustc.edu.cn](chengpengli@mail.ustc.edu.cn).
+
+---
+
+## 🌟 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=qinsheng/CORT&type=Date)](https://star-history.com/#qinsheng/CORT&Date)
+```
+
+---
