@@ -1,8 +1,3 @@
-当然可以！以下是**完整优化后的 `README.md` 内容**，你可以直接复制粘贴使用：
-
----
-
-```markdown
 <div align="center">
   <a href="#"><img src="./imgs/method.png" width="300px"></a>
 </div>
