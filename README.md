@@ -89,3 +89,15 @@ sh evaluation/eval_dp_8_tp_1_n_16_maxml_32k_maxfc_15_maxlpc_32k.sh <model_to_eva
 cd CORT
 sh deepscaler/rl_scripts/launch_cort_rl.sh
 ```
+
+## Citation
+
+@misc{li2025cortcodeintegratedreasoningthinking,
+      title={CoRT: Code-integrated Reasoning within Thinking}, 
+      author={Chengpeng Li and Zhengyang Tang and Ziniu Li and Mingfeng Xue and Keqin Bao and Tian Ding and Ruoyu Sun and Benyou Wang and Xiang Wang and Junyang Lin and Dayiheng Liu},
+      year={2025},
+      eprint={2506.09820},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2506.09820}, 
+}
