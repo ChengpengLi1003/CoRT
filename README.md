@@ -91,7 +91,8 @@ sh deepscaler/rl_scripts/launch_cort_rl.sh
 ```
 
 ## Citation
-```bash
+If you find our work useful for your research, please cite our paper:
+```bibtex
 @misc{li2025cortcodeintegratedreasoningthinking,
       title={CoRT: Code-integrated Reasoning within Thinking}, 
       author={Chengpeng Li and Zhengyang Tang and Ziniu Li and Mingfeng Xue and Keqin Bao and Tian Ding and Ruoyu Sun and Benyou Wang and Xiang Wang and Junyang Lin and Dayiheng Liu},
