@@ -91,6 +91,7 @@ sh deepscaler/rl_scripts/launch_cort_rl.sh
 ```
 
 ## Citation
+Our implementation builds upon the open-source codebases of [RLLM](https://github.com/agentica-project/rllm) and [VeRL](https://github.com/volcengine/verl).
 If you find our work useful for your research, please cite our paper:
 ```bibtex
 @misc{li2025cortcodeintegratedreasoningthinking,
