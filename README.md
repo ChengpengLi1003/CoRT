@@ -165,6 +165,6 @@ For questions or suggestions, feel free to reach out to us at [chengpengli@mail.
 
 ## 🌟 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=qinsheng/CORT&type=Date)](https://star-history.com/#qinsheng/CORT&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=ChengpengLi1003/CORT&type=Date)](https://star-history.com/#ChengpengLi1003/CORT&Date)
 ```
 
