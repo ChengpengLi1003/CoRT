@@ -4,6 +4,8 @@
   <a href="https://arxiv.org/abs/2506.09820"><img src="https://img.shields.io/badge/arXiv-2506.09820-b31b1b.svg?logo=arxiv" alt="Paper"></a>
   <a href="https://modelscope.cn/models?q=CoRT"><img src="https://img.shields.io/badge/ModelScope-CoRT-blue?logo=modelscope" alt="ModelScope Models"></a>
   <a href="https://github.com/ChengpengLi1003/CORT"><img src="https://img.shields.io/github/stars/ChengpengLi1003/CORT?style=social" alt="GitHub stars"></a>
+  <a href="https://huggingface.co/theshyustc/CoRT-Prompt-Hint-1.5B-RL"><img src="https://img.shields.io/badge/Hugging%20Face-CoRT--Prompt--Hint--1.5B--RL-orange?logo=huggingface" alt="Hugging Face Model"></a>
+  <a href="https://huggingface.co/theshyustc/CoRT-Hint-Engineering-1.5B-RL"><img src="https://img.shields.io/badge/Hugging%20Face-CoRT--Hint--Engineering--1.5B--RL-orange?logo=huggingface" alt="Hugging Face Model"></a>
 </div>
 
 <div align="center">
@@ -53,12 +55,14 @@ We open-source two 1.5B RL models trained with our CoRT framework:
 
 ### 📥 Prompt-Hint-1.5B-RL
 
-- **Model**: [CoRT-Prompt-Hint-1.5B-RL](https://modelscope.cn/models/qinsheng/CoRT-Prompt-Hint-1.5B-RL)
+- **Model (ModelScope)**: [CoRT-Prompt-Hint-1.5B-RL](https://modelscope.cn/models/qinsheng/CoRT-Prompt-Hint-1.5B-RL)
+- **Model (Hugging Face)**: [CoRT-Prompt-Hint-1.5B-RL](https://huggingface.co/theshyustc/CoRT-Prompt-Hint-1.5B-RL)
 - **Performance**: 58.3% average accuracy across benchmarks
 
 ### 🛠️ Hint-Engineering-1.5B-RL
 
-- **Model**: [CoRT-Hint-Engineering-1.5B-RL](https://modelscope.cn/models/qinsheng/CoRT-Hint-Engineering-1.5B-RL)
+- **Model (ModelScope)**: [CoRT-Hint-Engineering-1.5B-RL](https://modelscope.cn/models/qinsheng/CoRT-Hint-Engineering-1.5B-RL)
+- **Model (Hugging Face)**: [CoRT-Hint-Engineering-1.5B-RL](https://huggingface.co/theshyustc/CoRT-Hint-Engineering-1.5B-RL)
 - **Performance**: 56.4% average accuracy with superior token efficiency
 
 ---
