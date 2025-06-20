@@ -24,6 +24,43 @@ CoRT is a **post-training framework** that teaches **Large Reasoning Models (LRM
 
 ---
 
+## 📈 Model Performance Comparison
+
+Below is a comprehensive performance comparison of different mathematical reasoning models across various benchmarks, including AIME24, AIME25, AMC23, MATH500, and Olympiad. Our CoRT-trained models (Prompt-Hint-1.5B-RL and Hint-Engineering-1.5B-RL) demonstrate strong performance among lightweight models while maintaining token efficiency.
+
+| Model | Tool-Use | AIME24 | AIME25 | AMC23 | MATH500 | Olympiad | Avg |
+|:------|:--------:|-------:|-------:|------:|--------:|----------:|----:|
+| **SOTA Models** |  |  |  |  |  |  |  |
+| o1 | ❌ | 74.3 | **79.2** | - | _96.4_ | - | - |
+| DeepSeek-R1 | ❌ | **79.8** | _70.0_ | - | **97.3** | - | - |
+| QwQ-32B | ❌ | _79.5_ | 65.3 | **94.3** | 92.3 | **79.7** | **82.2** |
+| **Frontier Models (32B)** |  |  |  |  |  |  |  |
+| DeepSeek-R1-32B | ❌ | 72.9 | 59.0 | 88.8 | 94.3 | 72.5 | 77.5 |
+| START-32B | ✅ | 66.7 | 47.1 | **95.0** | 94.4 | - | - |
+| STILL-3-TOOL-32B | ✅ | _76.7_ | 64.4 | 91.3 | **96.6** | **75.9** | 81.0 |
+| ReTool-R1-32B | ✅ | 72.5 | 54.3 | 92.9 | 94.3 | 69.2 | 76.6 |
+| Prompt-Hint-SFT-32B | ✅ | **77.3** | _65.0_ | **95.0** | **96.6** | _75.1_ | **81.8** |
+| Hint-Engineering-SFT-32B | ✅ | 72.1 | 60.2 | 91.3 | 94.4 | 71.2 | 77.8 |
+| Hint-Engineering-RFT-32B | ✅ | _76.7_ | **67.1** | _94.4_ | _95.1_ | 73.4 | _81.3_ |
+| **Lightweight Models (1.5B)** |  |  |  |  |  |  |  |
+| DeepSeek-R1-1.5B | ❌ | 28.8 | 21.8 | 62.9 | 83.9 | 43.3 | 48.1 |
+| DeepScaleR-1.5B-Preview | ❌ | 40.0 | _30.0_ | _73.6_ | **87.8** | 50.0 | 56.3 |
+| ToRL-1.5B | ✅ | 26.7 | 26.7 | 67.5 | 77.8 | 44.0 | 48.5 |
+| Prompt-Hint-1.5B-SFT | ✅ | 30.6 | 25.0 | 63.1 | 83.3 | 50.4 | 50.5 |
+| Prompt-Hint-1.5B-RL | ✅ | **43.1** | **30.2** | **73.8** | _87.3_ | **57.1** | **58.3** |
+| Hint-Engineering-1.5B-SFT | ✅ | 34.0 | 23.5 | 64.6 | 84.2 | 49.8 | 51.2 |
+| Hint-Engineering-1.5B-RL | ✅ | _41.0_ | 29.4 | 70.0 | 85.8 | _55.6_ | _56.4_ |
+
+> **Note:**  
+> - Best results in each section are shown in **bold**.  
+> - Second-best results are _underlined_.  
+> - During inference: temperature = 0.6, top_p = 0.95.  
+> - Results for AIME24, AIME25, and AMC23 are averaged over 16 samples; others over 4 samples.  
+> - Max sequence length: 32,768 tokens. Max tool calls: 15.
+
+As shown, our **Prompt-Hint-1.5B-RL** model achieves the highest average accuracy (**58.3%**) among all 1.5B-sized models, demonstrating the effectiveness of the CoRT framework in enhancing mathematical reasoning with minimal model scale.
+---
+
 ## ✨ Key Features
 
 - **🔍 Hint-Engineering**: Strategic insertion of hints at appropriate positions to optimize LRM-CI interaction
