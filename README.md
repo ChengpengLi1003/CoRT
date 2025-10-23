@@ -1,4 +1,4 @@
-# CoRT: Code-integrated Reasoning within Thinking
+# Teaching Language Models to Reason with Tools
 
 <div align="center">  
   <a href="https://arxiv.org/abs/2506.09820"><img src="https://img.shields.io/badge/arXiv-2506.09820-b31b1b.svg?logo=arxiv" alt="Paper"></a>
