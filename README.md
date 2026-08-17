@@ -1,3 +1,5 @@
+
+
 # Teaching Language Models to Reason with Tools
 
 <div align="center">  
@@ -75,7 +77,7 @@ As shown, our **Prompt-Hint-1.5B-RL** model achieves the highest average accurac
 ```bash
 # Recommend Python 3.10
 # We recommend following https://github.com/agentica-project/rllm/tree/deepscaler for installation
-# Note: We depend on vLLM version 0.6.3.post1
+# Note: We depend on vLLM version 0.6.3
 
 cd deepscaler
 pip install -e ./verl
@@ -208,4 +210,3 @@ For questions or suggestions, feel free to reach out to us at [chengpengli@mail.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=ChengpengLi1003/CORT&type=Date)](https://star-history.com/#ChengpengLi1003/CORT&Date)
 ```
-
